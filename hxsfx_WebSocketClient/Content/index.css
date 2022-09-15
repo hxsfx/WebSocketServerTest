@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-size: 14px;
+  height: 100%;
+}
+body {
+  padding: 2%;
+  box-sizing: border-box;
+  background-color: #a3aebc;
+}
+#ChatContainer {
+  padding: 1% 25px 0 25px;
+  width: 80%;
+  max-width: 850px;
+  height: 100%;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+#ChatContainer .tip {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #999999;
+}
+#ChatContainer .tip:before {
+  content: "连接中";
+}
+#ChatContainer .tip.disConn {
+  color: red;
+}
+#ChatContainer .tip.disConn:before {
+  content: "× 连接已断开";
+}
+#ChatContainer .tip.conn {
+  color: green;
+}
+#ChatContainer .tip.conn:before {
+  content: "√ 已连接";
+}
+#ChatContainer .msgList {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 100px);
+}
+#ChatContainer .msgList .msgItem {
+  display: flex;
+  margin: 5px;
+}
+#ChatContainer .msgList .msgItem .chatHead {
+  height: 36px;
+  width: 36px;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+#ChatContainer .msgList .msgItem .msgMain {
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+}
+#ChatContainer .msgList .msgItem .msgMain .nickName {
+  color: #666666;
+}
+#ChatContainer .msgList .msgItem .msgMain .msg {
+  padding: 10px;
+  line-height: 30px;
+  color: #333333;
+}
+#ChatContainer .msgList .msgItem .msgMain .time {
+  color: #999999;
+  font-size: 9px;
+}
+#ChatContainer .msgList .msgItem .msgMain .time span:first-child {
+  margin-right: 3px;
+}
+#ChatContainer .msgList .self {
+  flex-direction: row-reverse;
+}
+#ChatContainer .msgList .self .nickName {
+  text-align: right;
+}
+#ChatContainer .msgList .self .msg {
+  border-radius: 10px 0 10px 10px;
+  background-color: #d6e5f6;
+}
+#ChatContainer .msgList .self .time {
+  text-align: right;
+}
+#ChatContainer .msgList .other .msg {
+  border-radius: 0 10px 10px 10px;
+  background-color: #e8eaed;
+}
+#ChatContainer .msgInput {
+  margin: 15px 0;
+  display: flex;
+}
+#ChatContainer .msgInput textarea {
+  font-size: 16px;
+  padding: 0 5px;
+  width: 80%;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  color: #333333;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
+  border: 1px solid #eee;
+  resize: none;
+}
+#ChatContainer .msgInput button {
+  width: 20%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color: #fefefe;
+  background-color: #2a6bf2;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #2a6bf2;
+}

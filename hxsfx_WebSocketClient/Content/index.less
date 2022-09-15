@@ -1,0 +1,176 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+@backgroundColor: #a3aebc;
+@ChatContainerBackgroundColor: #fefefe;
+@fontColor: #ecf4f5;
+@fontColor3: #333;
+@fontColor6: #666;
+@fontColor9: #999;
+@fontColorfe: #fefefe;
+@chatHeadBackgroundColor: white;
+@borderRadius: 10px;
+
+html, body {
+    font-size: 14px;
+    height: 100%;
+}
+
+body {
+    padding: 2%;
+    box-sizing: border-box;
+    background-color: @backgroundColor;
+}
+
+#ChatContainer {
+    padding: 1% 25px 0 25px;
+    width: 80%;
+    max-width: 850px;
+    height: 100%;
+    background-color: @ChatContainerBackgroundColor;
+    border-radius: @borderRadius;
+    box-sizing: border-box;
+    margin: auto;
+
+    .tip {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: @fontColor9;
+
+        &:before {
+            content: "连接中";
+        }
+    }
+
+    .tip.disConn {
+        color: red;
+
+        &:before {
+            content: "× 连接已断开";
+        }
+    }
+
+
+    .tip.conn {
+        color: green;
+
+        &:before {
+            content: "√ 已连接";
+        }
+    }
+
+
+
+    .msgList {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: calc(~"100% - 100px");
+
+        .msgItem {
+            display: flex;
+            margin: 5px;
+
+            .chatHead {
+                @sqrhw: 36px;
+                height: @sqrhw;
+                width: @sqrhw;
+                background-color: @chatHeadBackgroundColor;
+                border-radius: 100%;
+            }
+
+            .msgMain {
+                margin: 0 5px;
+                display: flex;
+                flex-direction: column;
+
+                .nickName {
+                    color: @fontColor6;
+                }
+
+                .msg {
+                    padding: 10px;
+                    line-height: 30px;
+                    color: @fontColor3;
+                }
+
+                .time {
+                    color: @fontColor9;
+                    font-size: 9px;
+
+                    span:first-child {
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        .self {
+            flex-direction: row-reverse;
+
+            .nickName {
+                text-align: right;
+            }
+
+            .msg {
+                border-radius: @borderRadius 0 @borderRadius @borderRadius;
+                background-color: #d6e5f6;
+            }
+
+            .time {
+                text-align: right;
+            }
+        }
+
+        .other {
+            .nickName {
+            }
+
+            .msg {
+                border-radius: 0 @borderRadius @borderRadius @borderRadius;
+                background-color: #e8eaed;
+            }
+
+            .time {
+            }
+        }
+    }
+
+    .msgInput {
+        margin: 15px 0;
+        display: flex;
+
+        textarea {
+            font-size: 16px;
+            padding: 0 5px;
+            width: 80%;
+            box-sizing: border-box;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            color: @fontColor3;
+            border-radius: @borderRadius 0 0 @borderRadius;
+            border: none;
+            outline: none;
+            border: 1px solid #eee;
+            resize: none; //禁止拖动大小
+        }
+
+        button {
+            width: 20%;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            color: @fontColorfe;
+            background-color: #2a6bf2;
+            border-radius: 0 @borderRadius @borderRadius 0;
+            border: 1px solid #2a6bf2;
+        }
+    }
+}
