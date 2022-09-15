@@ -1,0 +1,8 @@
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\bin\Debug\hxsfx_WebSocketServer.exe.config
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\bin\Debug\hxsfx_WebSocketServer.exe
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\bin\Debug\hxsfx_WebSocketServer.pdb
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\bin\Debug\Fleck.dll
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\bin\Debug\Newtonsoft.Json.dll
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\obj\Debug\hxsfx_WebSocketServer.csproj.CopyComplete
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\obj\Debug\hxsfx_WebSocketServer.exe
+D:\03_Code\20050202_工具库_200904\hxsfx_WebSocketServer\obj\Debug\hxsfx_WebSocketServer.pdb
